@@ -13,7 +13,7 @@ export default function Home() {
           marginRight: 'auto',
         }}
       >
-        Welcome to contact storage app!
+        Welcome to Phone Book!
       </h1>
     </div>
   );
