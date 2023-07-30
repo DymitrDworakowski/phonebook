@@ -4,6 +4,8 @@ export default function Home() {
       <h1
         style={{
           textAlign: 'center',
+          fontFamily: 'Open Sans',
+          letterSpacing: '2px',
           fontSize: '36px',
           marginTop: '30px',
           width: '350px',

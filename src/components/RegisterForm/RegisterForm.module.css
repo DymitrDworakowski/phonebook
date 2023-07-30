@@ -11,7 +11,9 @@
   display: flex;
   flex-direction: column;
   gap: 5px;
+  font-family: 'Open Sans', sans-serif;
   font-size: 18px;
+  letter-spacing: 2px;
   font-weight: 700;
 }
 
@@ -28,18 +30,54 @@
 }
 
 .registerBtn {
-    border-radius: 4px;
-    padding: 10px 30px;
-    border: none;
-    cursor: pointer;
-    font-weight: 600;
+  appearance: button;
+  background-color: #000;
+  background-image: none;
+  border: 1px solid #000;
+  border-radius: 4px;
+  box-shadow: #fff 4px 4px 0 0, #000 4px 4px 0 1px;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: ITCAvantGardeStd-Bk, Arial, sans-serif;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  letter-spacing: 2px;
+  font-weight: 400;
+  line-height: 20px;
+  margin: 0 5px 10px 0;
+  overflow: visible;
+  padding: 12px 40px;
+  text-align: center;
+  text-transform: none;
+  touch-action: manipulation;
+  user-select: none;
+  -webkit-user-select: none;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+
+.registerBtn:focus {
+  text-decoration: none;
+}
+
+.registerBtn:hover {
+  text-decoration: none;
+}
+
+.registerBtn:active {
+  box-shadow: rgba(0, 0, 0, 0.125) 0 3px 5px inset;
+  outline: 0;
+}
+
+.registerBtn:not([disabled]):active {
+  box-shadow: #fff 2px 2px 0 0, #000 2px 2px 0 1px;
+  transform: translate(2px, 2px);
+}
+
+@media (min-width: 768px) {
+  .registerBtn {
+    padding: 12px 50px;
   }
-  
-  .registerBtn:hover,
-  .registerBtn:focus {
-    background-color: rgb(17, 189, 55);
-    color: #fff;
-    transform: scale(1.1);
-    transition: all 250ms;
-  }
-  
+}

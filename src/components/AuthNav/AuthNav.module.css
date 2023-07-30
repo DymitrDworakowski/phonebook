@@ -1,5 +1,7 @@
 .authNavContainer {
+  font-family: 'Open Sans', sans-serif;
   font-size: 28px;
+  letter-spacing: 2px;
   font-weight: 600;
   font-style: inherit;
   display: flex;
