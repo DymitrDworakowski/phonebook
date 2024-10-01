@@ -1,0 +1,44 @@
+.modalOverlayAdd {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(63, 59, 59, 0.5); /* Прозорий білий фон */
+}
+
+.div_form {
+  overflow: auto;
+  background-color: rgba(255, 255, 255, 0.5); /* Прозорий білий фон */
+  border-radius: 8px; /* Радіус кутів вікна */
+  padding: 20px; /* Відступи всередині вікна */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Тінь вікна */
+}
+
+.form {
+  padding: px;
+}
+
+input {
+  width: 300px;
+  border: 2px solid black;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 10px;
+}
+.form_button {
+  width: 100px;
+  height: 50px;
+  border: none;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 10px;
+  background-color: #3f51b5;
+  color: #fff;
+  cursor: pointer;
+  transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.form_button:hover {
+  box-shadow: 5px 5px 8px 2px #667bd646;
+  background-color: #b8b8b8;
+  transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}

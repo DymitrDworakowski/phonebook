@@ -1,0 +1,13 @@
+.div_filter {
+  display: grid;
+  /* transform: perspective(90px) rotateY(5deg) rotate(-7deg) skew(0deg); */
+  justify-content: center;
+   font-family: Dancing Script, sans-serif; /* Шрифт тексту */
+  font-size: 20px; /* Розмір шрифту тексту */
+  
+}
+
+.p_filter {
+  display: flex;
+  justify-content: center;
+}

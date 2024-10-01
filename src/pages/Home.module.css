@@ -1,0 +1,10 @@
+.home_div {
+  background-image: url("../../img/2.jpg");
+  background-size: cover;
+}
+.h1_home {
+  height: 800px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
