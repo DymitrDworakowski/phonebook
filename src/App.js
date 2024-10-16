@@ -26,7 +26,7 @@ const App = () => {
 
   return isRefreshing ? (
     <div className="div_fir">
-    <b className='first'>Please wait...</b>
+      <b className="first">Please wait...</b>
     </div>
   ) : (
     <Routes>
