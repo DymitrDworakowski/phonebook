@@ -1,58 +1,66 @@
-.modalOverlayList {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: rgba(63, 59, 59, 0.5); /* Прозорий білий фон */
-}
-
 .div_list {
-  width: 80%; /* Ширина вікна */
-  max-width: 900px; /* Максимальна ширина вікна */
-  max-height: 80%; /* Максимальна висота вікна */
-  overflow: auto;
-  background-color: rgba(255, 255, 255, 0.5); /* Прозорий білий фон */
-  border-radius: 8px; /* Радіус кутів вікна */
-  padding: 20px; /* Відступи всередині вікна */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Тінь вікна */
-}
-
-.list {
   display: flex;
+
   justify-content: center;
-  padding: 0;
-  border: 1px solid black;
-}
-li {
-  list-style-type: none;
-
-  margin: 5px;
-  padding: 5px;
-
-  font-family: Caveat, sans-serif; /* Шрифт тексту */
-  font-size: 20px; /* Розмір шрифту тексту */
-  color: #333; /* Колір тексту */
-  text-align: center; /* Вирівнює текст по центру */
+  gap: 60px;
 }
 
-.li_button {
+.div_search {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgb(241, 244, 244);
+  border-radius: 20px;
+  gap: 15px;
+}
+.button_add {
+  background-color: rgb(0, 0, 0);
+  color: white;
   border: none;
+  padding: 10px 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-top: 30px;
+  
+  position: sticky;
+  top: 10px; /* Прилипає, коли верхній край сторінки досягне цього відступу */
+}
+.button_add:hover {
+  background-color: rgba(6, 9, 197, 0.8);
+  box-shadow: 5px 5px 8px 2px #667bd646;
+  transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.checked {
-  width: auto;
-  height: auto;
+.div_list_contact {
+  display: flex;
+  flex-direction: column;
+  /* width: 100%; */
 }
-.favorites {
-  width: 15px;
-  height: 15px;
-  margin-right: 15px;
-  border-radius: 50%;
+.div_more_button{
+  display: flex;
+  flex-direction: column-reverse;
+  padding: 10px;
+  background-color: rgb(241, 244, 244);
+  border-radius: 20px;
+  
 }
-
-.favorites.isTrue {
-  background-color: green;
+.more_button {
+  position: sticky;
+  top: 50px; /* Прилипає, коли верхній край сторінки досягне цього відступу */
+  padding: 10px 20px;
+  background-color: #4c534c;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
 }
-
-.favorites.isFalse {
-  background-color: red;
+.more_button:hover{
+  background-color: rgba(6, 9, 197, 0.8);
+  box-shadow: 5px 5px 8px 2px #667bd646;
+  transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.no_more_contacts {
+  color:red;
+  position: sticky;
+  bottom: 10px; /* Прилипає, коли верхній край сторінки досягне цього відступу */
 }

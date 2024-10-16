@@ -1,12 +1,18 @@
 .link {
-    display: inline-block;
-    text-decoration: none;
-    padding: 12px;
-    font-weight: 700;
-    color: #2a363b;
+  display: inline-block;
+  text-decoration: none;
+  padding: 8px 25px;
+  border-radius: 5px;
+  background-color: black;
+  border: 1px solid;
+  font-weight: 700;
+  color: #ffffff;
+  
+  margin-right: 100px;
+  }
+  .link:hover {
+    background-color: #4340ff;
   }
   
-  .link.active {
-    color: #e84a5f;
-  }
+  
   

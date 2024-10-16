@@ -18,6 +18,7 @@ const App = () => {
   const RegisterPage = lazy(() => import("./pages/Register"));
   const LoginPage = lazy(() => import("./pages/Login"));
   const ContactsPage = lazy(() => import("./pages/Contacts"));
+  const ContactDetailsPage = lazy(() => import("./pages/ContactDetails"));
 
   useEffect(() => {
     dispatch(refreshUser());
@@ -42,6 +43,15 @@ const App = () => {
           path="/login"
           element={
             <RestrictedRoute redirectTo="/contacts" component={<LoginPage />} />
+          }
+        />
+        <Route
+          path="/contacts/:contactId"
+          element={
+            <PrivateRoute
+              redirectTo="/contacts"
+              component={<ContactDetailsPage />}
+            />
           }
         />
         <Route
