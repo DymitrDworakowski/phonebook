@@ -1,28 +1,9 @@
-.div_contact {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  transform: rotate(-32deg) skew(10deg);
-}
-h1,
-h2 {
+.contact_section {
   display: flex;
   justify-content: center;
-  font-family: Caveat, sans-serif; /* Шрифт тексту */
+  flex-wrap: wrap;
 }
 section {
-  background-image: url(../../img/img3.jpg);
-  background-repeat: no-repeat;
-  padding: 150px;
-  display: grid;
-  height: 100%;
-  justify-content: center;
-  background-size: contain;
-  background-attachment: fixed; /* Зафіксоване фонове зображення */
-}
-.div_calendar {
-  font-family: Caveat, sans-serif; /* Шрифт тексту */
-  padding-left: 500px;
-  margin-top: 100px;
-  transform: rotate(-32deg) skew(10deg);
+  width: 100vw; /* ширина на 100% від вьюпорту */
+  margin: 30px;
 }

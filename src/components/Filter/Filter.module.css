@@ -1,13 +1,27 @@
 .div_filter {
   display: grid;
-  /* transform: perspective(90px) rotateY(5deg) rotate(-7deg) skew(0deg); */
   justify-content: center;
-   font-family: Dancing Script, sans-serif; /* Шрифт тексту */
-  font-size: 20px; /* Розмір шрифту тексту */
-  
+  position: sticky;
+  top: 40px;
 }
 
-.p_filter {
-  display: flex;
-  justify-content: center;
+.title_filter {
+  margin: 0 10px 0 10px;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.title_select {
+  margin: 0 10px 0 10px;
+  font-size: 14px;
+}
+
+.select_filter {
+  margin: 10px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+
+  font-family: "Poppins", sans-serif;
+  font-size: 12px;
+  padding: 8px;
 }

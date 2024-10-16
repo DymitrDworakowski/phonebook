@@ -3,17 +3,16 @@ import axios from "axios";
 
 export const fetchContacts = createAsyncThunk(
   "contacts/fetchAll",
-  async (_, thunkAPI) => {
+  async (page = 1, thunkAPI) => {
     try {
-      const response = await axios.get("api/contacts");
-      console.log(response.data);
+      const response = await axios.get(`api/contacts?page=${page}`);
       return response.data;
     } catch (e) {
-      return thunkAPI.rejectWithValue(e._message);
+      console.error("Error fetching contacts:", e); // Лог помилки
+      return thunkAPI.rejectWithValue(e.message); // Використовуйте e.message для отримання опису помилки
     }
   }
 );
-
 export const addContact = createAsyncThunk(
   "contacts/addContact",
   async ({ name, phone, email }, thunkAPI) => {

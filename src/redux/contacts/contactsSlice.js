@@ -22,6 +22,8 @@ const contactsSlice = createSlice({
     items: [],
     isLoading: false,
     error: null,
+    page: 1,
+    hasMoreContacts: false,
   },
   extraReducers: (builder) => {
     builder
@@ -29,7 +31,25 @@ const contactsSlice = createSlice({
       .addCase(fetchContacts.fulfilled, (state, action) => {
         state.isLoading = false;
         state.error = null;
-        state.items = action.payload;
+
+        const newContacts = action.payload.contacts;
+
+        // Фільтруємо нові контакти, щоб уникнути дублювання
+        const uniqueContacts = newContacts.filter(
+          (newContact) =>
+            !state.items.some(
+              (existingContact) => existingContact._id === newContact._id
+            )
+        );
+
+        // Додаємо тільки унікальні контакти до існуючого масиву
+        state.items = [...state.items, ...uniqueContacts];
+
+        // Оновлюємо сторінку
+        state.page = action.payload.currentPage;
+
+        // Перевіряємо, чи є ще контакти для завантаження
+        state.hasMoreContacts = newContacts.length > 0;
       })
       .addCase(fetchContacts.rejected, handleRejected)
       .addCase(addContact.pending, handlePending)
@@ -43,24 +63,18 @@ const contactsSlice = createSlice({
       .addCase(deleteContact.fulfilled, (state, action) => {
         state.isLoading = false;
         state.error = null;
-        const index = state.items.findIndex(
-          (contact) => contact.id === action.payload.id
+        state.items = state.items.filter(
+          (contact) => contact._id !== action.meta.arg // action.meta.arg міститиме ID видаленого контакту
         );
-        state.items.splice(index, 1);
       })
       .addCase(deleteContact.rejected, handleRejected)
       .addCase(editContact.pending, handlePending)
       .addCase(editContact.fulfilled, (state, action) => {
         state.isLoading = false;
         state.error = null;
-        const updatedContact = action.payload; // Оновлений контакт, який повернув сервер
-        const index = state.items.findIndex(
-          (contact) => contact.id === updatedContact.id
+        state.items = state.items.map((contact) =>
+          contact._id === action.payload._id ? action.payload : contact
         );
-        if (index !== -1) {
-          // Якщо контакт існує у списку, замініть його оновленим контактом
-          state.items.splice(index, 1, updatedContact);
-        }
       })
       .addCase(editContact.rejected, handleRejected)
       .addCase(statusFavorite.pending, handlePending)
@@ -68,13 +82,11 @@ const contactsSlice = createSlice({
         state.isLoading = false;
         state.error = null;
         const statusContact = action.payload;
-        console.log(statusContact); // Оновлений контакт, який повернув сервер
         const index = state.items.findIndex(
-          (contact) => contact.id === statusContact.id
+          (contact) => contact._id === statusContact._id
         );
         if (index !== -1) {
-          // Якщо контакт існує у списку, замініть його оновленим контактом
-          state.items.splice(index, 1, statusContact);
+          state.items[index] = statusContact;
         }
       })
       .addCase(statusFavorite.rejected, handleRejected);

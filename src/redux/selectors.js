@@ -11,8 +11,9 @@ export const selectFilter = (state) => state.filter;
 export const selectFilterContacts = createSelector(
   [selectContacts, selectFilter],
   (items, filter) => {
+    const contactsArray = items || []; // Якщо contacts може бути undefined
     // Фільтрація контактів
-    const filteredContacts = items.filter(
+    const filteredContacts = contactsArray.filter(
       (contact) =>
         contact.name.toLowerCase().includes(filter.toLowerCase()) ||
         contact.phone.toLowerCase().includes(filter.toLowerCase()) ||

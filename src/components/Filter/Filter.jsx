@@ -2,25 +2,38 @@ import css from "./Filter.module.css";
 import { useDispatch } from "react-redux";
 import { findContact } from "../../redux/contacts/filterSlice";
 
-const Filter = () => {
+const Filter = ({ handleChange, sortBy }) => {
   const dispatch = useDispatch();
 
-  const handleFilter = (e) => {
+  const handleFilter = async (e) => {
     e.preventDefault();
     const value = e.target.value; // Отримуємо значення поля введення безпосередньо з події
 
-    dispatch(findContact(value));
+    await dispatch(findContact(value));
   };
 
   return (
     <div className={css.div_filter}>
-      <p className={css.p_filter}>Find contact by name</p>
+      <p className={css.title_filter}>Filters</p>
       <input
         type="text"
         name="search"
-        placeholder="Find contact"
+        placeholder="Search by name"
         onChange={handleFilter}
       />
+      <p className={css.title_select}>Sort by:</p>
+      <select
+        labelId="demo-simple-select-label"
+        id="demo-simple-select"
+        value={sortBy}
+        onChange={handleChange}
+        className={css.select_filter}
+      >
+        <option value="none">None</option>
+        <option value="byAB">Sort name by A-B</option>
+        <option value="byBA">Sort name by B-A</option>
+        <option value="byFavorite">Sort favorite</option>
+      </select>
     </div>
   );
 };

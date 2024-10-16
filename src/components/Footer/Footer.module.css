@@ -1,0 +1,18 @@
+.footer_container {
+  display: flex;
+  align-items: baseline;
+  gap:600px;
+  height: 100px;
+}
+.footer_connect {
+  margin-right: 50px;
+  font-size: 14px;
+}
+.icons {
+  margin-top: 5px;
+  display: flex;
+  gap: 20px;
+  list-style: none; 
+  padding: 0; 
+}
+
