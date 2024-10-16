@@ -21,17 +21,3 @@
     height: 100px;
   }
 }
-@media (max-width: 480px) {
-  .footer_container {
-   
-    flex-direction: column; /* Вертикальне розташування елементів */
-    align-items: center; /* Елементи вирівнюються по початку */
-    gap: 10px; /* Зменшення відстані між елементами */
-  }
-  .footer_connect {
-    margin-right: 10px;
-    font-size: 14px;
-    text-align: center; /* Вирівнює текст по центру */
-  }
-  
-}
