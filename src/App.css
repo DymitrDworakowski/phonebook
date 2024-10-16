@@ -12,3 +12,29 @@ body {
 button{
   font-family: 'Poppins', sans-serif;
 }
+.div_fir{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f1f1f1;
+}
+.first{
+  font-size: 24px;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #333;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  line-height: 1.2;
+  border: none;
+  padding: 15px 30px;
+  background-color: #000000; 
+  color: white;
+  border-radius: 4px;
+  transition: background-color 0.3s ease-in-out;
+  
+
+}

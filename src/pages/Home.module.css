@@ -55,7 +55,7 @@
 }
 
 .img_main {
-  width: 100%;
+  width: 500px;
   height: auto;
   box-shadow: 22px -22px 2px 5px rgba(0, 0, 0, 0.2); /* Тінь */
   border-radius: 5px;

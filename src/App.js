@@ -25,7 +25,9 @@ const App = () => {
   }, [dispatch]);
 
   return isRefreshing ? (
-    <b>Refreshing user...</b>
+    <div className="div_fir">
+    <b className='first'>Please wait...</b>
+    </div>
   ) : (
     <Routes>
       <Route path="/" element={<Layout />}>
