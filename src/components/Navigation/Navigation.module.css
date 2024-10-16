@@ -12,3 +12,26 @@
 .link.active {
   border-bottom: 2px solid #2a363b; /* Стиль для активного посилання */
 }
+
+@media (max-width: 768px) {
+  .footer_container {
+    display: flex;
+    align-items: baseline;
+    gap: 200px;
+    height: 100px;
+  }
+}
+@media (max-width: 480px) {
+  .footer_container {
+   
+    flex-direction: column; /* Вертикальне розташування елементів */
+    align-items: center; /* Елементи вирівнюються по початку */
+    gap: 10px; /* Зменшення відстані між елементами */
+  }
+  .footer_connect {
+    margin-right: 10px;
+    font-size: 14px;
+    text-align: center; /* Вирівнює текст по центру */
+  }
+  
+}
