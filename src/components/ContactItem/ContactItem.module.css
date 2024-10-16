@@ -16,6 +16,53 @@
   box-shadow: 0 12px 20px rgba(0, 0, 0, 0.15); /* Більш виражена тінь при наведенні */
 }
 
+
+/* Для планшетів (до 768px) */
+@media (max-width: 768px) {
+  .list {
+    flex-direction: column; /* Вертикальне розташування елементів */
+    align-items: flex-start; /* Елементи вирівнюються по початку */
+    gap: 10px; /* Зменшення відстані між елементами */
+  }
+
+  .name {
+    font-size: 18px; /* Трохи менший шрифт для планшетів */
+  }
+
+  .other {
+    font-size: 14px; /* Зменшений шрифт для іншої інформації */
+  }
+}
+
+/* Для мобільних пристроїв (до 480px) */
+@media (max-width: 480px) {
+  .list {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 8px; /* Зменшені відступи */
+    margin: 5px;
+    gap: 8px;
+  }
+
+  .name {
+    font-size: 16px; /* Зменшуємо шрифт для мобільних */
+  }
+
+  .other {
+    font-size: 12px; /* Ще менший шрифт для мобільних */
+  }
+
+  .button_edit, .button_delete {
+    width: 100%; /* Кнопки займають всю ширину на мобільних */
+    padding: 10px;
+    font-size: 14px;
+  }
+
+  .checkbox p {
+    font-size: 12px;
+  }
+}
+
 .ul_contact {
   font-family: 'Poppins', sans-serif;
   display: flex;
@@ -101,3 +148,4 @@ fill: none;
 .link:hover {
   text-decoration: underline; /* Підкреслення при наведенні */
 }
+

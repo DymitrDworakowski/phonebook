@@ -61,25 +61,6 @@
   border-radius: 5px;
 }
 
-/* .quotation_box {
-  margin-top: 80px;
-  display: flex;
-  justify-content: center;
-  height: 200px;
-  background-color: rgb(201, 202, 202);
-  width: 100%; 
-  align-items: center;
-  text-align: center;
-  flex-direction:column;}
-
-.quotation{
-  display: flex;
-  gap: 5px;
-}
-.img_men {
-  width: 60px;
-  border-radius: 50%;  */
-
 .quotation_box {
   margin-top: 30px;
   max-width: 100%;
