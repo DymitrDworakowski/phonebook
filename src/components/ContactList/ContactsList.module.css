@@ -115,6 +115,7 @@
     width: 100%; /* Кнопка займає всю ширину */
     padding: 15px;
     margin-top: 20px;
+    position: static;
   }
 
   .more_button {

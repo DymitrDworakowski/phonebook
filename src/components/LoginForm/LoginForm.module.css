@@ -72,4 +72,7 @@
   .form_container {
     margin: 50px 0 50px 0;
   }
+  .login_button {
+    font-size: 15px;
+  }
 }
