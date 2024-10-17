@@ -1,0 +1,106 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Центрує блок цитати посередині */
+}
+
+.content {
+  margin-top: 50px;
+  display: flex;
+  justify-content: space-between; /* Вирівнює текст і зображення по різних сторонах */
+  width: 80%; /* Ви можете змінити ширину контейнера на свій розсуд */
+  align-items: center; /* Вирівнює елементи по вертикалі */
+}
+
+.text_block {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: 30%; /* Ширина блоку з текстом і кнопкою */
+}
+
+.h1_home {
+  font-size: 40px;
+  margin-top: 50px;
+  margin-left: 0px; /* Виправляємо відступи */
+  margin-bottom: 10px;
+}
+
+.p_home {
+  margin-top: 0px;
+  margin-left: 0px; /* Виправляємо відступи */
+}
+
+.link {
+  display: inline-block;
+  text-decoration: none;
+  padding: 8px 25px;
+  border-radius: 5px;
+  background-color: black;
+  border: 1px solid;
+  font-weight: 700;
+  color: #ffffff;
+  margin-top: 20px; /* Відступ між текстом і кнопкою */
+  width: fit-content; /* Підганяє ширину під контент */
+}
+
+.link:hover {
+  background-color: #4340ff;
+}
+
+.img_box {
+  display: flex;
+  justify-content: flex-end;
+  width: 50%; /* Ширина блоку для зображення */
+}
+
+.img_main {
+  width: 100%;
+  height: auto;
+  box-shadow: 22px -22px 2px 5px rgba(0, 0, 0, 0.2); /* Тінь */
+  border-radius: 5px;
+}
+
+.quotation_box {
+  margin-top: 30px;
+  max-width: 100%;
+  height: 200px;
+  background-color: rgb(201, 202, 202);
+}
+
+.quotation_slide {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.quotation {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.img_men {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+@media (max-width: 768px) {
+  .footer_container {
+    display: flex;
+    align-items: baseline;
+    gap: 200px;
+    height: 100px;
+  }
+}
+@media (max-width: 480px) {
+  .text_block {
+    font-size: 10px;
+    text-align: end;
+  }
+  .h1_home {
+    font-size: 20px;
+  }
+}
