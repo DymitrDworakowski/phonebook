@@ -1,0 +1,58 @@
+.div_form {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Прозорий чорний колір фону */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 18px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #f9f9f9;
+  border-radius: 8px; /* Округлені кути */
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2); /* Додає тінь */
+  width: auto;
+  height: 400px;
+  padding: 10px;
+  position: fixed;
+  
+}
+
+input {
+  width: 300px;
+  border-radius: 10px; /* Округлення полів */
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin: 10px;
+}
+
+.button_div {
+  display: flex;
+  margin-top: 20px;
+}
+.form_button {
+  width: 100px;
+  height: 50px;
+  border: none;
+  border-radius: 10px;
+  margin: 10px;
+  background-color: black;
+  color: #fff;
+  cursor: pointer;
+  transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.form_button:hover {
+  background-color: #4340ff;
+  transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
