@@ -9,7 +9,7 @@ import { selectIsLoading } from "../redux/selectors";
 import Loader from "../components/Loader/Loader";
 
 import Footer from "../components/Footer/Footer";
-import  css  from "./Contacts.module.css";
+import css from "./Contacts.module.css";
 
 export default function Tasks() {
   const dispatch = useDispatch();
