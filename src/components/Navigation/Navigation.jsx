@@ -6,15 +6,22 @@ export const Navigation = () => {
   const { isLoggedIn } = useAuth();
 
   return (
-    <nav>
+    <nav className={css.nav}>
       <NavLink
-  className={({ isActive }) => (isActive ? `${css.link} ${css.active}` : css.link)}
-  to="/"
->
-  Contactconn
-</NavLink>
+        className={({ isActive }) =>
+          isActive ? `${css.link} ${css.active}` : css.link
+        }
+        to="/"
+      >
+        Contactconn
+      </NavLink>
       {isLoggedIn && (
-        <NavLink className={({ isActive }) => (isActive ? `${css.link} ${css.active}` : css.link)} to="/contacts">
+        <NavLink
+          className={({ isActive }) =>
+            isActive ? `${css.link} ${css.active}` : css.link
+          }
+          to="/contacts"
+        >
           Contacts
         </NavLink>
       )}

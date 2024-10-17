@@ -12,3 +12,22 @@
 .link.active {
   border-bottom: 2px solid #2a363b; /* Стиль для активного посилання */
 }
+.nav {
+  text-align: center;
+}
+@media (max-width: 768px) {
+  .link {
+    font-size: 12px;
+    text-align: center;
+  }
+}
+@media (max-width: 480px) {
+  .link {
+    font-size: 10px;
+    padding: 0px;
+    margin-right: 5px;
+  }
+  .nav {
+    text-align: center;
+  }
+}
