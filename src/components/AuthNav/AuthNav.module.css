@@ -15,13 +15,13 @@
 }
 @media (max-width: 768px) {
   .link {
-    font-size: 12px;
+    font-size: 20px;
     padding: 7px 12px;
   }
 }
 @media (max-width: 480px) {
   .link {
-    font-size: 10px;
+    font-size: 15px;
     padding: 5px;
   }
 }
