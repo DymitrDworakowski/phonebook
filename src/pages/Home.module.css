@@ -97,12 +97,15 @@
 }
 @media (max-width: 480px) {
   .text_block {
-    font-size: 10px;
+    font-size: 15px;
   }
   .h1_home {
-    font-size: 20px;
+    font-size: 25px;
   }
   .content {
     margin: 0;
+  }
+  .link {
+    font-size: 15px;
   }
 }
