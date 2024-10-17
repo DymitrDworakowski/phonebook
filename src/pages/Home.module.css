@@ -102,4 +102,7 @@
   .h1_home {
     font-size: 20px;
   }
+  .content {
+    margin: 0;
+  }
 }
