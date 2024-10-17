@@ -3,15 +3,14 @@ import { NavLink } from "react-router-dom";
 import Slider from "react-slick";
 import bookImage from "../assets/img/2.jpg";
 import aj from "../assets/img/AJ.jpeg";
-import ag from '../assets/img/AG.jpeg';
-import js from '../assets/img/JS.jpeg';
-import kl from '../assets/img/KL.jpeg';
+import ag from "../assets/img/AG.jpeg";
+import js from "../assets/img/JS.jpeg";
+import kl from "../assets/img/KL.jpeg";
 import Footer from "../components/Footer/Footer";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 export default function Home() {
-
   const settings = {
     dots: true, // Показувати крапки навігації
     infinite: true, // Нескінченний цикл
@@ -25,24 +24,24 @@ export default function Home() {
     {
       text: "ContactConnect made finding contacts effortless. Our connections grew by 50% and that's fantastic!",
       author: "Alice Johnson, Sales Manager",
-      image: aj, 
+      image: aj,
     },
     {
       text: "This platform changed the way we connect with partners. Highly recommended!",
       author: "John Smith, Marketing Director",
-      image: js, 
-    },{
+      image: js,
+    },
+    {
       text: "ContactConnect has helped me expand my network significantly. The features are top-notch!",
       author: "Amanda Green, Business Owner",
-      image: ag, 
-    },{
+      image: ag,
+    },
+    {
       text: "The ability to categorize and filter contacts in ContactConnect is fantastic! It has saved me countless hours.",
       author: "Kevin Lee, Financial Analyst",
-      image: kl, 
+      image: kl,
     },
-   
   ];
-
 
   return (
     <div className={css.container}>
@@ -55,26 +54,26 @@ export default function Home() {
           </NavLink>
         </div>
         <div className={css.img_box}>
-          <img
-            src={bookImage}
-            alt="book"
-            className={css.img_main}
-          />
+          <img src={bookImage} alt="book" className={css.img_main} />
         </div>
       </div>
       <div className={css.quotation_box}>
-      <Slider {...settings}>
-        {quotes.map((quote, index) => (
-          <div key={index} className={css.quotation_slide}>
-            <h3>"{quote.text}"</h3>
-            <div className={css.quotation}>
-              <img className={css.img_men} src={quote.image} alt={quote.author} />
-              <p>{quote.author}</p>
+        <Slider {...settings}>
+          {quotes.map((quote, index) => (
+            <div key={index} className={css.quotation_slide}>
+              <h3>"{quote.text}"</h3>
+              <div className={css.quotation}>
+                <img
+                  className={css.img_men}
+                  src={quote.image}
+                  alt={quote.author}
+                />
+                <p>{quote.author}</p>
+              </div>
             </div>
-          </div>
-        ))}
-      </Slider>
-    </div>
+          ))}
+        </Slider>
+      </div>
       <Footer />
     </div>
   );
