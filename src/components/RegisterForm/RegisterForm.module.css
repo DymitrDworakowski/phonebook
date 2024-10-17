@@ -69,4 +69,7 @@
   .form_container {
     margin: 50px 0 50px 0;
   }
+  .reg_button {
+    font-size: 15px;
+  }
 }

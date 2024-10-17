@@ -26,4 +26,7 @@
   .username {
     font-size: 15px;
   }
+  .logout_button {
+    margin: 4px;
+  }
 }
