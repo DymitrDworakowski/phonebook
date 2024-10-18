@@ -23,9 +23,9 @@
 }
 @media (max-width: 480px) {
   .link {
-    font-size: 10px;
+    font-size: 15px;
     padding: 0px;
-    margin: 0 10px 0 0;
+    margin-left:20px;
   }
   .nav {
     text-align: center;
