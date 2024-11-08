@@ -67,7 +67,6 @@ export const editContact = createAsyncThunk(
 export const statusFavorite = createAsyncThunk(
   "contacts/statusFavorite",
   async ({ favorite, id }, thunkAPI) => {
-    console.log(favorite);
     try {
       const response = await axios.patch(`api/contacts/${id}/favorite`, {
         favorite,

@@ -10,19 +10,55 @@ const ContactModal = ({ contact, handleClose }) => {
   const [phone, setPhone] = useState(contact ? contact.phone : "");
   const [email, setEmail] = useState(contact ? contact.email : "");
   
-  const modalRef = useRef(null); // Для відстеження кліків поза модалкою
+  const modalRef = useRef(null); 
 
+  // Validation function for email format
+  const isValidEmail = (email) => {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email);
+  };
+
+  // Format and validate phone number
+  const formatPhoneNumber = (phone) => {
+    // Remove all non-numeric characters
+    return phone.replace(/\D/g, "");
+  };
+
+  // Handle form submission with validation
   const handleSubmit = async (e) => {
     e.preventDefault();
+
+    // Check name length
+    if (name.length < 2) {
+      alert("Name must be at least 2 characters long.");
+      return;
+    }
+
+    // Validate email format
+    if (!isValidEmail(email)) {
+      alert("Please enter a valid email address.");
+      return;
+    }
+
+    // Format phone and validate length
+    const formattedPhone = formatPhoneNumber(phone);
+    if (formattedPhone.length < 10) {
+      alert("Phone number must be at least 10 digits.");
+      return;
+    }
+
+    const contactData = { name, phone: formattedPhone, email };
+
+    // Dispatch appropriate action
     if (contact) {
-      await dispatch(editContact({ id: contact._id, name, phone, email }));
+      await dispatch(editContact({ id: contact._id, ...contactData }));
     } else {
-      await dispatch(addContact({ name, phone, email }));
+      await dispatch(addContact(contactData));
     }
     handleClose();
   };
 
-  // Закриття модалки по клавіші Escape
+  // Close modal on Escape key
   useEffect(() => {
     const handleKeyDown = (e) => {
       if (e.key === "Escape") {
@@ -36,7 +72,7 @@ const ContactModal = ({ contact, handleClose }) => {
     };
   }, [handleClose]);
 
-  // Закриття модалки по кліку поза її межами
+  // Close modal on outside click
   useEffect(() => {
     const handleClickOutside = (e) => {
       if (modalRef.current && !modalRef.current.contains(e.target)) {
