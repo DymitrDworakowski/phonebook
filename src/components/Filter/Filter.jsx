@@ -23,16 +23,15 @@ const Filter = ({ handleChange, sortBy }) => {
       />
       <p className={css.title_select}>Sort by:</p>
       <select
-        labelId="demo-simple-select-label"
         id="demo-simple-select"
         value={sortBy}
         onChange={handleChange}
         className={css.select_filter}
       >
         <option value="none">None</option>
-        <option value="byAB">Sort name by A-B</option>
-        <option value="byBA">Sort name by B-A</option>
-        <option value="byFavorite">Sort favorite</option>
+        <option value="byAB">Sort name A to Z</option>
+        <option value="byBA">Sort name Z to A</option>
+        <option value="byFavorite">Sort by favorite</option>
       </select>
     </div>
   );

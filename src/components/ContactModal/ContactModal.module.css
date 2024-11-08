@@ -8,6 +8,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  z-index: 1000;
 }
 
 .form {
@@ -25,7 +26,6 @@
   height: 400px;
   padding: 10px;
   position: fixed;
-  
 }
 
 input {

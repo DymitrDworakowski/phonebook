@@ -53,9 +53,9 @@ export const RegisterForm = () => {
     }
 
     // Якщо немає помилок, викликаємо логін
-    dispatch(register({ email, password }));
+    dispatch(register({ name, email, password }));
     form.reset();
-    setErrors({ email: "", password: "" }); // Очищаємо помилки після успішного сабміту
+    setErrors({ name: "", email: "", password: "" }); // Очищаємо помилки після успішного сабміту
   };
 
   return (
