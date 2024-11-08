@@ -23,7 +23,6 @@ const Filter = ({ handleChange, sortBy }) => {
       />
       <p className={css.title_select}>Sort by:</p>
       <select
-        labelId="demo-simple-select-label"
         id="demo-simple-select"
         value={sortBy}
         onChange={handleChange}
